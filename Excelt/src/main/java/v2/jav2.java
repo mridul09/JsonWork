@@ -1,4 +1,4 @@
-package automate;
+package v2;
 
 
 import java.awt.List;
@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -36,24 +37,27 @@ public class jav2 {
 
 	public static void main(String[] args)  throws IOException {
 		String fileName=null;
-		File[] list=new FilesFinder().FileSearcher("C:/Users/mridulshukla/Desktop/workspace/Excelt/src/main/resources/Files");
+		File[] list=new FilesFinder().FileSearcher("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/main/resources/Files");
+		 JsonBuilderFactory factory = Json.createBuilderFactory(null);
+		
+	
 		
 		for(int counter=0;counter<list.length;counter++) {
+			String flag="a";
 			BufferedReader br = new BufferedReader(new FileReader(list[counter]));	
 			
 		
 			String line = br.readLine();
 			String[] header =br.readLine().split(",");
-			
 		
+			JsonArrayBuilder Pvalue = Json.createArrayBuilder();
 	
 		while ((line = br.readLine()) != null && !line.isEmpty()) { 
 			
 		try {	
 			String[] fields = line.split(",");
 			
-			 JsonBuilderFactory factory = Json.createBuilderFactory(null);
-			 JsonObject value = factory.createObjectBuilder()
+			 JsonObject	value  = factory.createObjectBuilder()
 			     .add(header[0], fields[0])
 			 	.add(header[1], fields[1])
 			     .add(header[2], fields[2])
@@ -70,26 +74,31 @@ public class jav2 {
 			     .add(header[13], fields[13])
 			     .add(header[14], fields[14])
 			     .build();
-			 	fileName=list[counter].getName().split(".csv")[0];
-			 	System.out.println(fileName);
-			 
-			 	
-			 	
-		 try {
-				FileWriter fileWriter = new FileWriter("C:/Users/mridulshukla/Desktop/workspace/Excelt/src/test/resources/JsonFile/"+fileName+counter+".json");
-					fileWriter.write(value.toString());
-					fileWriter.flush();
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			 counter++;
-			 System.out.println("counter");
-		}catch(Exception e) {
+			System.out.println(value.toString());	
+			try {
+			  Pvalue.add(value);
+			}catch(NullPointerException e){
+				System.out.println(Pvalue);	
+			}
+			 	 	
+			 }catch(Exception e) {
 			e.printStackTrace();
 		}
-			
+			flag=flag+flag;
 			} 
+		try {
+			
+			fileName=list[counter].getName().split(".csv")[0];
+		 	System.out.println(Pvalue.build().toString());
+			FileWriter fileWriter = new FileWriter("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/test/resources/JsonFile/"+fileName+counter+".json");
+				fileWriter.write(Pvalue.build().toString());
+				fileWriter.flush();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		 counter++;
+		 System.out.println("counter");
 		br.close();
 		System.out.println("Done.................................");
 		}

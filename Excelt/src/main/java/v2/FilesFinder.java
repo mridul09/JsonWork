@@ -1,4 +1,4 @@
-package automate;
+package v2;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ public class FilesFinder {
 	// "C:/Users/mridulshukla/Desktop/workspace/Excelt/src/main/resources/Files"
 	File folder = new File(src);
 	File[] listOfFiles = folder.listFiles();
-
+System.out.println(listOfFiles.length);
 	    for (int i = 0; i < listOfFiles.length; i++) {
 	      if (listOfFiles[i].isFile()) {
 	        System.out.println( listOfFiles[i].getName());
