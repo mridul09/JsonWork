@@ -1,0 +1,7 @@
+sply_ty,txval,typ,etin,pos,rt,iamt,camt,samt,csamt
+sply_ty,txval,typ,etin,pos,rt,iamt,camt,samt,csamt
+INTRA,23456.34,OE,,27,5,,586.4085,586.4085,23.56
+INTRA,761456.78,OE,,27,12,,45687.4068,45687.4068,12.34
+INTRA,256.34,OE,,27,18,,23.0706,23.0706,965.12
+INTER,93156.44,OE,,33,12,11178.7728,,,23.45
+INTER,9456.39,OE,,22,5,472.8195,,,76.81

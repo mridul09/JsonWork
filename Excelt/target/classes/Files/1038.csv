@@ -1,0 +1,7 @@
+inum,idt,val,sply_ty,pos,num,txval,rt,iamt,camt,samt,csamt,tx_i,tx_c,tx_s,tx_cs,elg
+inum,idt,val,sply_ty,pos,num,txval,rt,iamt,camt,samt,csamt,tx_i,tx_c,tx_s,tx_cs,elg
+BUR-29SEP.1001,04-07-2017,1000,INTRA,33,1,100,5,10,0,0,10,10,0,0,10,ip
+BUR-29SEP.1002,04-07-2017,1000,INTRA,33,1,100,15,10,0,0,10,10,0,0,10,ip
+BUR-29SEP.1003,04-07-2017,1000,INTRA,33,1,100,25,0,10,10,0,0,10,10,0,ip
+BUR-29SEP.1004,04-07-2017,1000,INTRA,33,1,100,5,10,0,0,10,10,0,0,10,ip
+BUR-29SEP.1005,04-07-2017,1000,INTRA,33,1,100,10,10,0,0,10,10,0,0,10,ip

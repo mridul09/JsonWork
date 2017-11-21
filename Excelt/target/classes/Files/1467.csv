@@ -1,0 +1,5 @@
+inum,idt,val,sply_ty,pos,num,txval,rt,iamt,camt,samt,csamt,tx_i,tx_c,tx_s,tx_cs,elg
+inum,idt,val,sply_ty,pos,num,txval,rt,iamt,camt,samt,csamt,tx_i,tx_c,tx_s,tx_cs,elg
+B2BURCOM4U3Jul11,01-07-2017,23456.45,INTRA,18,1,23456.45,5,,586.41,586.41,100.77,0,234.45,234.45,23.45,NO
+B2BURCOM4U3Jul12,01-07-2017,23456.45,INTER,33,1,23456.45,5,996.9,,,,234.45,0,0,23.45,NO
+B2BURCOM4U3Jul13,01-07-2017,23456.45,INTER,15,1,23456.45,5,996.9,,,,,0,0,,NO

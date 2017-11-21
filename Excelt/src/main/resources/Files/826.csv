@@ -1,0 +1,7 @@
+Whether Imorted from SEZ,Sezs Gstin(only present if is_sez=Y),Bill of Entry Number,Bill of Entry Date,Bill of Entry Value,Port Code,Serial no,Taxable value ,GST rate,IGST amount,CESS amount,Eligibilty Of ITC, ITC -IGST, ITC-CESS
+is_sez,stin,boe_num,boe_dt,boe_val,port_code,num,txval,rt,iamt,csamt,elg,tx_i,tx_cs
+Y,asdefrgthyjukil,1234565,04-07-2017,1000,123456,1,560,5,5,5,ip,5,5
+Y,q1w2e3r4t5y6u7i,1234566,04-07-2017,1000,123456,1,560,5,5,5,ip,5,5
+N,,1234567,05-07-2017,1000,123456,1,560,5,5,5,ip,5,5
+N,,1234567,05-07-2017,1000,123456,2,560,5,5,5,ip,5,5
+N,,1234567,05-07-2017,1000,123456,3,560,5,5,5,ip,5,5

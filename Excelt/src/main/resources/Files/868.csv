@@ -1,0 +1,7 @@
+#Invoice No.,Invoice Date,Place of Supply,Invoice Value,Serial no,Taxable value ,GST rate,IGST amount,CESS amount,Eligibilty Of ITC, ITC -IGST, ITC-CESS
+inum,idt,pos,ival,num,txval,rt,iamt,csamt,elg,tx_i,tx_cs
+INVIMPS18101,04-07-2017,27,90,1,9,5,11,4,is,8,1
+INVIMPS18102,04-07-2017,27,50,1,10,5,12,5,is,9,3
+INVIMPS18103,05-07-2017,27,300,1,10,5,13,6,is,10,4
+INVIMPS18104,04-07-2017,21,500,1,10,5,14,7,is,11,5
+INVIMPS18105,05-07-2017,21,700,1,10,5,8,8,is,12,6

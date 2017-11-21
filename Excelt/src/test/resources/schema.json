@@ -1,0 +1,85 @@
+{
+   
+    "title": "JsonFiles",
+    "description": "A product from the catalog",
+    "type": "object",
+    "properties": {
+        "ctin": {
+            "description": "The unique identifier for a product",
+            "type": "string"
+        },
+        "idt": {
+            "description": "Name of the product",
+            "type": "string"
+        },
+        "val": {
+            "type": "string",
+            
+            "minimum": 0,
+            "exclusiveMinimum": true
+       },
+        "pos": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "rchrg": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "etin": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "inv_typ": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "num": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+
+         "rt": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "txval": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "iamt": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "camt": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "samt": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "csamt": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+         "inum": {
+            "type": "string",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        }
+        
+	},
+    "required": ["ctin", "idt", "val", "pos","rchrg","etin","inv_typ","num","rt","txval","iamt","camt","samt","csamt","inum"]
+}

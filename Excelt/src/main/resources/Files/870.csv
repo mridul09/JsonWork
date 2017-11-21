@@ -1,0 +1,4 @@
+ctin,inum,idt,val,inv_typ,txval,num,rt,iamt,camt,samt,csamt,rchrg,pos,elg,tx_i,tx_c,tx_s,tx_cs
+ctin,inum,idt,val,inv_typ,txval,num,rt,iamt,camt,samt,csamt,rchrg,pos,elg,tx_i,tx_c,tx_s,tx_cs
+33AZNPP2826P1ZP,GSTR2B2B22221,07-07-2017,215000,R,215000,1,28,,1000,2000,1050,N,27,ip,,200,300,150
+27GSPMH0822G1ZU,GSTR2B2B22222,07-07-2017,101000,R,101000,2,28,28280,,,200,N,27,ip,1000,0,0,100

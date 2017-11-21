@@ -1,0 +1,5 @@
+ctin,inum,idt,val,inv_typ,txval,num,rt,iamt,camt,samt,csamt,rchrg,pos,elg,tx_i,tx_c,tx_s,tx_cs
+ctin,inum,idt,val,inv_typ,txval,num,rt,iamt,camt,samt,csamt,rchrg,pos,elg,tx_i,tx_c,tx_s,tx_cs
+27GSPTN0822G1ZH,B2BCOM4U2Oct1001,01-10-2017,23456.45,R,23456.45,1,5,,586.41,586.41,100.77,N,27,IP,,23456.45,23456.45,23456.45
+33GSPTN0822G1ZH,B2BCOM4U2Oct1002,01-10-2017,23456.45,R,23456.45,1,5,996.90,,,100.77,N,33,IP,23456.45,,,23456.45
+15GSPTN0822G1ZH,B2BCOM4U2Oct1003,01-10-2017,23456.45,R,23456.45,1,5,996.90,,,100.77,N,15,IP,23456.45,,,23456.45

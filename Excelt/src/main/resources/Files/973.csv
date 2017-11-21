@@ -1,0 +1,4 @@
+#Buyer GSTIN,Note No.,Note Date,Reason for Issuing Note,Related To Pre GST period, ,Invoice Date,Note Type,Note Value,Serial no,GST Rate,Note Taxable value ,IGST Amount ,CGST Amount ,SGST Amount ,Cess Amount , ITC -IGST, ITC-CGST, ITC-SGST, ITC-CESS,Eligibility For ITC
+ctin,nt_num,nt_dt,rsn,p_gst,inum,idt,ntty,val,num,rt,txval,iamt,camt,samt,csamt,tx_i,tx_c,tx_s,tx_cs,elg
+03PUNJA4445B1ZX,Credit_0111,07-07-2017,01-Sales Return,N,Inv.16011,04-07-2017,C,100,1,5,10,5,0,0,5,5,0,0,5,ip
+03PUNJA4445B1ZX,Credit_0211,07-07-2017,02-Post Sale Discount,N,Inv.16011,04-07-2017,C,50,2,28,20,0,15,15,0,0,15,15,0,no
