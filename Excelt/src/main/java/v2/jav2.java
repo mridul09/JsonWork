@@ -18,6 +18,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Scanner;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -39,6 +41,9 @@ public class jav2 {
 
 	public static void main(String[] args)  throws IOException {
 		
+		final Logger LOGGER = Logger.getLogger(jav2.class);
+		BasicConfigurator.configure();
+		
 		String fileName=null;
 		File[] list=new FilesFinder().FileSearcher("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/main/resources/Files");
 		JsonBuilderFactory factory = Json.createBuilderFactory(null);
@@ -47,8 +52,9 @@ public class jav2 {
 	
 		
 		for(int counter=0;counter<list.length;counter++) {
-			System.out.println(list[counter]);
-			String flag="a";
+			
+			LOGGER.info("reading the File"+list[counter]);
+			
 			BufferedReader br = new BufferedReader(new FileReader(list[counter]));
 			String line = br.readLine();
 			String[] header =br.readLine().split(",");
@@ -69,30 +75,31 @@ public class jav2 {
 			 	 	
 				
 				
-				flag=flag+flag;
+				
 			} 
 		
 			try {
 			 
 			
 				fileName=list[counter].getName().split(".csv")[0];
-				System.out.println(fileName);
+				LOGGER.info("the File is been processd"+fileName);
 				FileWriter fileWriter = new FileWriter("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/test/resources/JsonFile/"+fileName+".json");
-				System.out.println(counter);
+				
 				fileWriter.write(Pvalue.build().toString());
 				fileWriter.flush();
 				
 			} catch (Exception e) {
 	
-				e.printStackTrace();
+				LOGGER.error(e);
 			}
 		 
-			counter++;
-			System.out.println("counter");
+			
+			
 			br.close();
-			System.out.println("Done.................................");
+			LOGGER.info("the process is completed fr the FILE"+fileName);
 		}
-		 
+		
+		LOGGER.info("..................completer making of "+list.length+" json Files.......................");
 		
 	}
 

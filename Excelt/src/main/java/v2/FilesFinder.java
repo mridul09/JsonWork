@@ -8,11 +8,6 @@ public class FilesFinder {
 	// "C:/Users/mridulshukla/Desktop/workspace/Excelt/src/main/resources/Files"
 	File folder = new File(src);
 	File[] listOfFiles = folder.listFiles();
-	    for (int i = 0; i < listOfFiles.length; i++) {
-	      if (listOfFiles[i].isFile()) {
-	        System.out.println( listOfFiles[i].getName());
-	      } 
-	    }
-		return listOfFiles;
+	return listOfFiles;
 	}
 }
