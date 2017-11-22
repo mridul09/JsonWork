@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -31,76 +32,65 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonBuilderFactory;
 import javax.json.JsonObject; 
 import javax.json.JsonObjectBuilder; 
-import javax.json.JsonValue; 
+import javax.json.JsonValue;
+import javax.json.JsonWriter; 
 
 public class jav2 {	
 
 	public static void main(String[] args)  throws IOException {
+		
 		String fileName=null;
 		File[] list=new FilesFinder().FileSearcher("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/main/resources/Files");
-		 JsonBuilderFactory factory = Json.createBuilderFactory(null);
-		
+		JsonBuilderFactory factory = Json.createBuilderFactory(null);
+		JsonArrayBuilder Pvalue = Json.createArrayBuilder();
+		JsonObjectBuilder value=Json.createObjectBuilder();
 	
 		
 		for(int counter=0;counter<list.length;counter++) {
+			System.out.println(list[counter]);
 			String flag="a";
-			BufferedReader br = new BufferedReader(new FileReader(list[counter]));	
-			
-		
+			BufferedReader br = new BufferedReader(new FileReader(list[counter]));
 			String line = br.readLine();
 			String[] header =br.readLine().split(",");
 		
-			JsonArrayBuilder Pvalue = Json.createArrayBuilder();
-	
-		while ((line = br.readLine()) != null && !line.isEmpty()) { 
 			
-		try {	
-			String[] fields = line.split(",");
+			while ((line = br.readLine()) != null && !line.isEmpty()) { 
 			
-			 JsonObject	value  = factory.createObjectBuilder()
-			     .add(header[0], fields[0])
-			 	.add(header[1], fields[1])
-			     .add(header[2], fields[2])
-			     .add(header[3], fields[3])
-			     .add(header[4], fields[4])
-			     .add(header[5], fields[5])
-			     .add(header[6], fields[6])
-			     .add(header[7], fields[7])
-			     .add(header[8], fields[8])
-			     .add(header[9], fields[9])
-			     .add(header[10], fields[10])
-			     .add(header[11], fields[11])
-			     .add(header[12], fields[12])
-			     .add(header[13], fields[13])
-			     .add(header[14], fields[14])
-			     .build();
-			System.out.println(value.toString());	
-			try {
-			  Pvalue.add(value);
-			}catch(NullPointerException e){
-				System.out.println(Pvalue);	
-			}
+				
+					String[] fields = line.split(",");
+			
+					for(int i=0;i<header.length;i++) {
+						value.add(header[i], fields[i]);
+					}
+				
+					
+					Pvalue.add(value);
+					
 			 	 	
-			 }catch(Exception e) {
-			e.printStackTrace();
-		}
-			flag=flag+flag;
+				
+				
+				flag=flag+flag;
 			} 
-		try {
+		
+			try {
+			 
 			
-			fileName=list[counter].getName().split(".csv")[0];
-		 	System.out.println(Pvalue.build().toString());
-			FileWriter fileWriter = new FileWriter("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/test/resources/JsonFile/"+fileName+counter+".json");
+				fileName=list[counter].getName().split(".csv")[0];
+				System.out.println(fileName);
+				FileWriter fileWriter = new FileWriter("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/test/resources/JsonFile/"+fileName+".json");
+				System.out.println(counter);
 				fileWriter.write(Pvalue.build().toString());
 				fileWriter.flush();
 				
 			} catch (Exception e) {
+	
 				e.printStackTrace();
 			}
-		 counter++;
-		 System.out.println("counter");
-		br.close();
-		System.out.println("Done.................................");
+		 
+			counter++;
+			System.out.println("counter");
+			br.close();
+			System.out.println("Done.................................");
 		}
 		 
 		
