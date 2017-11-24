@@ -46,7 +46,8 @@ public class jav2 {
 		
 		String fileName=null;
 		File[] list=new FilesFinder().FileSearcher("C:/Users/mridulshukla/Desktop/Mridul/personall/Excelt/src/main/resources/Files");
-		JsonBuilderFactory factory = Json.createBuilderFactory(null);
+		
+		//JsonBuilderFactory factory = Json.createBuilderFactory(null);
 		JsonArrayBuilder Pvalue = Json.createArrayBuilder();
 		JsonObjectBuilder value=Json.createObjectBuilder();
 	
@@ -62,19 +63,13 @@ public class jav2 {
 			
 			while ((line = br.readLine()) != null && !line.isEmpty()) { 
 			
-				
 					String[] fields = line.split(",");
 			
 					for(int i=0;i<header.length;i++) {
 						value.add(header[i], fields[i]);
+						
 					}
-				
-					
 					Pvalue.add(value);
-					
-			 	 	
-				
-				
 				
 			} 
 		
