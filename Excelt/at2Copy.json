@@ -1,0 +1,79 @@
+{
+
+	"$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "JsonFiles",
+    "description": "A product from the catalog",
+    "type": "object",
+	"properties":{
+       "pos":{
+          "description":"Recipient state code",
+          "type":"integer",
+          "pattern":"^(3[0-7]|[12][0-9]|0[1-9]|97)$",
+          "maxLength":2,
+          "minLength":2
+       },
+       "sply_ty":{
+           "description":"Supply Type of invoice",
+           "type":"string",
+           "maxLength":8,
+           "enum":[
+              "INTER",
+              "INTRA"
+            ]
+       }	,
+       "ad_amt":{
+           "description":"Amount of Advance received",
+      		"type": "number",
+      		"multipleOf": 0.01,
+      		"maximum": 99999999999.99,
+      		"minimum": 0
+
+       },
+       "csamt":{
+         "type":"number",
+         "multipleOf":0.01,
+         "maximum":99999999999.99,
+         "minimum":0
+        },
+       "camt":{
+         "type":"number",
+         "multipleOf":0.01,
+         "maximum":99999999999.99,
+         "minimum":0
+       },
+       "samt":{
+         "type":"number",
+         "multipleOf":0.01,
+         "maximum":99999999999.99,
+         "minimum":0
+       },
+       "iamt":{
+         "type":"number",
+         "multipleOf":0.01,
+         "maximum":99999999999.99,
+         "minimum":0
+       },
+       "rt":{
+         "type":"integer",
+         "multipleOf":0.01,
+         "maximum":999.9,
+         "minimum":0
+       }
+	
+	},
+	"oneOf": 
+	[
+    		{
+      		"required": [
+        			"iamt"
+     	 	]
+    		},
+   		{
+      		"required": [
+        			"camt",
+        			"samt"
+     		 ]
+   		 }
+  	]
+	
+}
